@@ -106,15 +106,4 @@ laughIcon.setAttribute("style", "color:white;")
 
   newJokeButton.addEventListener("click", getAndDisplayWeather);
 
-  //Screen 3 - SQL Gift Lists
-
   
-import * as apiHelpers from "./api-helpers.js";
-
-const form = document.querySelector("form");
-
-
-
-
-
-
