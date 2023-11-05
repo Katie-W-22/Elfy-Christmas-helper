@@ -100,7 +100,9 @@
   #screen4 {
   color: rgb(2, 79, 2);
   border:dotted 1rem rgb(2, 79, 2);
+  background-color: rgb(170, 184, 170);
   }
+  
   
   /* #navigation menu fixed to bottom of viewport */
   #navigation {
@@ -158,12 +160,17 @@
     color: rgb(144, 6, 6)
   }
 
-  #elf__hat{
-    width: 10rem;
-    border:solid white 1rem;
-    border-radius: 50%;
-    margin:3rem;
-  }
+#jokes__icon{
+  color:rgb(2, 79, 2);
+}
+
+#gift__icon{
+  color: rgb(144, 6, 6);
+}
+
+#ads__icon{
+color:rgb(170, 184, 170)
+}
 
   #holly{
     padding:3rem;
@@ -280,4 +287,16 @@ button{
 
 #all__notes{
     color:blue
+}
+
+.news{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+img{
+  border:1px solid white;
+  border-radius: 20px;
+  height:7rem;
 }
