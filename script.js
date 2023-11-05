@@ -106,4 +106,29 @@ laughIcon.setAttribute("style", "color:white;")
 
   newJokeButton.addEventListener("click", getAndDisplayWeather);
 
+  // Function to calculate the time remaining until Christmas
+function countdown() {
+    const now = new Date();
+    const christmas = new Date(now.getFullYear(), 11, 25); // Month is 0-indexed, so 11 is December
+  
+    // Calculate the time remaining until Christmas
+    const difference = christmas - now;
+  
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  
+    // Display the countdown
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
+  }
+  
+  // Update the countdown every second
+  setInterval(countdown, 1000);
+  
+  // Initial call to display the countdown immediately when the page loads
+  countdown();
   
