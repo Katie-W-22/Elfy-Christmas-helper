@@ -176,7 +176,7 @@
 
 
   /*falling snow*/
-  .snowflakes {
+  .snowflake {
     position: absolute;
     top: 0;
     left: 0;
@@ -254,3 +254,26 @@
 }
 
 
+.weather-card{
+    border:dotted 2px white;
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 10px;
+}
+
+#weatherMax{
+    color: rgb(2, 79, 2);
+}
+
+button{
+    border: solid 5px rgb(144, 6, 6);
+    border-radius: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
+    font-family: myFirstFont;
+    padding-inline: 2rem;
+}
+
+#laugh{
+    color:rgb(2, 79, 2);
+}

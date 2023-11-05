@@ -1,7 +1,3 @@
-var particle = new Particle();
-var myDevice = "0000"; // Photon device ID
-var myToken = "0000"; // Photon access token
-
 // functions that hide all screens & then show a specific screen
 // these functions also update navigation menu to highlight active screen
 function showScreen1() {
@@ -43,4 +39,69 @@ function showNotification() {
   //$("#notification").slideDown("fast");
 }
 
-// Add other JS for your smart device web app
+
+// Main function to retrieve and display the weather
+//Asynchronously retreives weather and displays it
+async function getAndDisplayWeather() {
+    const weatherForecast = await retrieveWeather();
+    displayWeather(weatherForecast);
+  }
+  
+  // Function to retrieve the weather
+  async function retrieveWeather() {
+    //Send GET request to the meteo weather API. Await the response
+    const response = await fetch(
+      "https://v2.jokeapi.dev/joke/Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit",
+      {
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    );
+  
+    //Check if response failed, if so log an error and halt the app
+    if (!response.ok) {
+      console.error(`Status: ${response.status}`);
+      console.error(`Text: ${await response.text()}`);
+      return;
+    }
+  
+    //return the parsed JSON from the response (which contains weather object)
+    const data = await response.json();
+    return data;
+  }
+  
+  //test retrieveWeather with console.log();
+  // console.log(retrieveWeather);
+  
+  // Function to update the DOM with the provided weather
+  function displayWeather(weatherForecast) {
+    const weatherMinTemp = document.getElementById("weatherMin");
+    weatherMinTemp.textContent = `${weatherForecast.setup}`;
+    const weatherMaxTemp = document.getElementById("weatherMax");
+    weatherMaxTemp.textContent = `${weatherForecast.delivery}`;
+    weatherMaxTemp.setAttribute("style", "color:rgb(2, 79, 2);");
+    const laughIcon = document.getElementById("laugh");
+laughIcon.setAttribute("style", "color:rgb(2, 79, 2);")
+  }
+  
+  // Waits for the DOM to be fully loaded and then displays the weather
+  document.addEventListener("DOMContentLoaded", getAndDisplayWeather);
+
+
+  //reveals punchline of joke
+ function revealPunchline () {
+const punchline = document.getElementById("weatherMax");
+punchline.setAttribute("style", "color:white;")
+const laughIcon = document.getElementById("laugh");
+laughIcon.setAttribute("style", "color:white;")
+ }
+
+  const punchlineButton = document.getElementById("punch__button")
+
+  punchlineButton.addEventListener("click", revealPunchline);
+
+  //brings new joke
+  const newJokeButton = document.getElementById("joke__button")
+
+  newJokeButton.addEventListener("click", getAndDisplayWeather);
