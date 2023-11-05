@@ -1,0 +1,167 @@
+/* Add or modify CSS for your web app */
+
+* {
+    box-sizing: border-box; /* use traditional box model sizing */
+  }
+  
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* #notification  */
+  #notification {
+    display: none; /* hide until needed */
+    position: fixed; /* fix to viewport */
+    top: 0; /* place at top of viewport */
+    left: 50%;
+    transform: translate(-50%, 10px);
+    max-width: 300px;
+    width: calc(100vw - 20px);
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #fbfbfb;
+    border-radius: 10px;
+    border: 1px solid #bbbbbb;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    text-align: left;
+  }
+  
+  /* close button for notification */
+  .closebtn {
+    margin: -15px -15px 10px 10px;
+    padding: 10px;
+    color: #888888;
+    font-weight: bold;
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* hover effect for close button */
+  .closebtn:hover {
+    color: #000000;
+  }
+  
+  /* .screen class applies to all screens */
+  .screen {
+    max-width: 480px; /* mimic largest phone width */
+    width: 100vw; /* width of viewport */
+    height: calc(100vh - 4.5em); /* height of viewport minus height of #navigation menu */
+    margin: 0 auto;
+    padding: 20px 10px;
+    overflow: auto;
+    border: 1px solid #888888;
+    /* can add other CSS for all screens, such as background-color, etc. */
+  
+  }
+  
+  /* show #screen1 when app first starts */
+  #screen1 {
+      display: block;
+  }
+  
+  /* hide other screens when app first starts */
+  #screen2, #screen3, #screen4 {
+      display: none;
+  }
+  
+  #screen1 >h1{
+    font-size: 4rem;
+  }
+  /* can add custom CSS for each specific screen */
+  #screen1 {
+  background-color: rgb(144, 6, 6);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border:dotted 1rem white;
+  }
+  
+  #screen2 {
+  background-color: rgb(2, 79, 2);
+  color: white;
+  border:dotted 1rem white;
+  }
+
+  .jokes__container{
+    border: dotted 0.2rem white;
+   margin: 3rem;
+  }
+  
+  #screen3 {
+  background-color: white;
+  color: rgb(144, 6, 6);
+  border:dotted 1rem rgb(144, 6, 6);
+  }
+  
+  #screen4 {
+  color: rgb(2, 79, 2);
+  border:dotted 1rem rgb(2, 79, 2);
+  }
+  
+  /* #navigation menu fixed to bottom of viewport */
+  #navigation {
+    position: fixed; /* fix to viewport */
+    bottom: 0; /* place at bottom of viewport */
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 480px; /* mimic largest phone width */
+    width: 100vw; /* width of viewport */
+    height: 4.5em;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #888888;
+  }
+  
+  /* nav menu options */
+  nav > a {
+      display: inline-block;
+      /* for max-width and width, divide by number of screens */
+      max-width: calc((480px / 4) - 4px);
+      width: calc((100vw / 4) - 4px);
+      margin: 0;
+      padding: 0.5em 0;
+      text-align: center;
+      background-color: #ffffff;
+      color: #888888;
+      transition: 0.3s;
+  }
+  
+  /* hover effect for nav menu options */
+  nav > a:hover {
+      background-color: #eeeeee;
+  }
+  
+  /* .active class indicates current screen within nav menu */
+  nav > a.active {
+      background-color: #ffffff;
+      color: black;
+  }
+  
+  /* nav menu icon label */
+  nav > a > p {
+      font-size: 0.75em;
+      margin: 0.5em 0 0;
+  }
+  
+  .front__page{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+  }
+
+  #home__icon{
+    color: rgb(144, 6, 6)
+  }
+
+  #elf__hat{
+    width: 10rem;
+    border:solid white 1rem;
+    border-radius: 50%;
+    margin:3rem;
+  }

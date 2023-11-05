@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Elfy</title>
+	<!-- Load Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/3a054c9193.js" crossorigin="anonymous" defer></script>
+	<!-- Load CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="notification">
+	  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+	  <!-- HTML for Notification -->
+	  <p>Notification Message</p>
+			
+	</div>
+	<div class="screen" id="screen1">
+	  <!-- HTML for Screen 1 -->
+	  <h1>Elfy</h1>
+      <img id="elf__hat" src="elf-hat-ears-santa-claus-helper-funny-selfie-photo-mask_208509-1699.avif" alt="image of elf hat and ears">
+      <p>Share a christmas cracker joke, create a gift list for loved ones, add something to your shopping list!</p>
+
+      </div>
+
+	</div>
+	<div class="screen" id="screen2">
+	  <!-- HTML for Screen 2 -->
+	  <h1>Christmas Cracker Jokes</h1>
+      <i class="fa-regular fa-face-laugh fa-3x"></i>
+      <div class="jokes__container">
+        <p>Jokes will appear here</p>
+            </div>
+	</div> 
+    
+	<div class="screen" id="screen3">
+	  <!-- HTML for Screen 3 -->
+      <h1>Gift Lists</h1>
+      <i class="fa-solid fa-gift fa-3x"></i>
+      <div>
+        <p>Create gift lists for your loved ones!</p>
+        <form>
+            <label for="fname">Recipients Name</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="lname">Gift ideas</label><br>
+            <input type="text" id="gifts" name="gifts">
+            <br><br>
+  <input type="submit" value="Submit">
+          </form>
+      </div>
+
+	</div>
+	<div class="screen" id="screen4">
+	  <!-- HTML for Screen 4 -->
+      <h1>Shopping Lists</h1>
+      <i class="fa-regular fa-rectangle-list fa-3x"></i>
+	
+	</div>
+	<div id="navigation">
+	  <nav>
+		<!-- Menu icons from Font Awesome -->
+		<a class="menu active" onclick="showScreen1()"><i id="home__icon" class="fas fa-home fa-2x"></i><br>Home</a>
+		<a class="menu" onclick="showScreen2()"><i class="fa-regular fa-face-laugh fa-2x"></i><br>Jokes</a>
+		<a class="menu" onclick="showScreen3()"><i class="fa-solid fa-gift fa-2x"></i><br>Gifts</a>
+		<a class="menu" onclick="showScreen4()"><i class="fa-solid fa-pencil fa-2x"></i><br>Lists</a>			
+	  </nav>
+	</div>
+	<!-- Load JavaScript files -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+  </body>
+</html>
