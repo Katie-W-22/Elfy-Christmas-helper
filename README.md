@@ -1,4 +1,8 @@
 # Christmas-helper
+
+
+https://github.com/Katie-W-22/Elfy-Christmas-helper/assets/142401708/7f74c982-8a7e-4efe-9dd4-9bb05816587c
+
 <img width="294" alt="Screenshot 2023-11-19 at 15 06 30" src="https://github.com/Katie-W-22/Elfy-Christmas-helper/assets/142401708/4b2eef65-b7db-4ca5-9aea-f3165afecc49">
 
 <img width="294" alt="Screenshot 2023-11-19 at 15 07 00" src="https://github.com/Katie-W-22/Elfy-Christmas-helper/assets/142401708/ad60aa82-1ee1-405d-9153-c3794f464dc5">
